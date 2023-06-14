@@ -1,0 +1,8 @@
+name: AFK
+version: '${project.version}'
+author: TheAIguy_
+main: com.theaiguy_.afk.AFK
+api-version: 1.18
+softdepend: [PlaceholderAPI]
+commands:
+  afk:

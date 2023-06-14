@@ -1,0 +1,37 @@
+# How long (in seconds) to wait before considering the player to be afk?
+timeout: 60
+
+# Kick the player when afk?
+kick-afk: false
+
+# Internal placeholders:
+#     %player% - player name.
+# Messages support PlaceholderAPI placeholders.
+messages:
+  # Command usage
+  usage: "&cUsage: /afk"
+
+  kick: "&cYou were kicked because you are afk."
+
+  # Messages sent to the player
+  send-afk-message: true
+  afk: "&7You are now afk."
+  not-afk: "&7You are no longer afk."
+
+  # Broadcast to everyone
+  broadcast: true
+  broadcast-on: "&7%player% is now afk."
+  broadcast-off: "&7%player% is no longer afk."
+
+  # Display afk status in tab list
+  change-tab: true
+  # This is how the player is shown in tab list
+  tab-name-afk: "%player% &c[AFK]"
+  tab-name: "%player%"
+
+# Events that will result in player no longer being afk
+triggers:
+  move: true
+  chat: true
+  command: true
+  interact: true
