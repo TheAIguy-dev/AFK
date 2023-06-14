@@ -10,6 +10,9 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 .idea
+AFK.iml
+AFK (1).iml
+AFK (2).iml
 
 # Eclipse m2e generated files
 # Eclipse Core
