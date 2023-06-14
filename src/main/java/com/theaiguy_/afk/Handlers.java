@@ -101,7 +101,7 @@ public class Handlers
     {
         String name = "None";
         if (player != null) name = player.getName();
-        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) return PlaceholderAPI.setPlaceholders(player, input.replaceAll("%player%", name));
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) return ChatColor.translateAlternateColorCodes('&', PlaceholderAPI.setPlaceholders(player, input.replaceAll("%player%", name)));
         else return input.replaceAll("%player%", name);
     }
 

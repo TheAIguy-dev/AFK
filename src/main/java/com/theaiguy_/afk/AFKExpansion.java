@@ -1,6 +1,7 @@
 package com.theaiguy_.afk;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -38,7 +39,7 @@ public class AFKExpansion extends PlaceholderExpansion
         if (params.equalsIgnoreCase("list")) return afks.toString();
         if (params.equalsIgnoreCase("prefixed") || params.equalsIgnoreCase("suffixed"))
         {
-            if (player != null) return Handlers.Placeholders(player, Handlers.getFormattedString("messages.tab-name-afk"));
+            if (player != null) return ChatColor.translateAlternateColorCodes('&', Handlers.Placeholders(player, Handlers.getFormattedString("messages.tab-name-afk")));
             else return Handlers.getFormattedString("messages.tab-name-afk");
         }
         if (player != null) return afks.contains(player.getName()) ? player.getName() : null;
