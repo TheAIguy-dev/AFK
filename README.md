@@ -1,6 +1,7 @@
 # AFK
 
 AFK is a lightweight and highly configurable tool designed to keep track of players who are away from their keyboards in Minecraft. With its customizable features, server administrators can easily manage AFK status notifications, time thresholds, player kick options, and leverage the power of PlaceholderAPI.
+AFK is a valuable addition to any Minecraft server, enhancing player engagement and promoting a more active community. Download and install it now to create a vibrant gaming environment!
 
 ## Key Features
 
@@ -29,10 +30,6 @@ AFK supports PlaceholderAPI, allowing you to use placeholders in your messages a
 4. Players will receive notifications when they become AFK and return from being AFK.
 5. Utilize the tab menu to easily identify and monitor the AFK status of players on your server.
 6. Use the `/afk` command to manually set your status as AFK when you need to step away.
-
-AFK is a valuable addition to any Minecraft server, enhancing player engagement and promoting a more active community. Download and install it now to create a vibrant gaming environment!
-
-Remember to configure your PlaceholderAPI placeholders to fully utilize the AFK plugin's capabilities.
 
 **Please note**: PlaceholderAPI must be installed separately for the placeholders to function correctly.
 
