@@ -16,7 +16,8 @@ AFK is a lightweight and highly configurable tool designed to keep track of play
 
 AFK supports PlaceholderAPI, allowing you to use placeholders in your messages and customize the display of AFK-related information. Here are some of the available placeholders:
 
-- `%afk_{player}%`: Returns whether the specified player is AFK.
+- `%afk%`: If used in context of a player, returns whether said player is AFK. 
+- `%afk_{player}%`: Returns whether the specified player is AFK (brackets are necessary).
 - `%afk_list%`: Provides a list of players who are currently AFK.
 - `%afk_prefixed%`: Displays how the player is represented in the tab when they are AFK (equivalent to `%afk_suffixed%`).
 

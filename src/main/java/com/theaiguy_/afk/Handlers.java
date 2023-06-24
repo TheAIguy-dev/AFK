@@ -99,7 +99,7 @@ public class Handlers
 
     public static String Placeholders(Player player, String input)
     {
-        String name = "None";
+        String name = "%player%";
         if (player != null) name = player.getName();
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) return ChatColor.translateAlternateColorCodes('&', PlaceholderAPI.setPlaceholders(player, input.replaceAll("%player%", name)));
         else return input.replaceAll("%player%", name);

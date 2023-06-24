@@ -5,7 +5,11 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.logging.Level;
+
 import static com.theaiguy_.afk.AFK.afks;
+import static com.theaiguy_.afk.AFK.plugin;
+import static com.theaiguy_.afk.Handlers.Placeholders;
 
 public class AFKExpansion extends PlaceholderExpansion
 {
@@ -24,7 +28,7 @@ public class AFKExpansion extends PlaceholderExpansion
     @Override
     public @NotNull String getVersion()
     {
-        return "1.0";
+        return "1.2";
     }
 
     @Override
@@ -38,11 +42,12 @@ public class AFKExpansion extends PlaceholderExpansion
     {
         if (params.equalsIgnoreCase("list")) return afks.toString();
         if (params.equalsIgnoreCase("prefixed") || params.equalsIgnoreCase("suffixed"))
-        {
-            if (player != null) return ChatColor.translateAlternateColorCodes('&', Handlers.Placeholders(player, Handlers.getFormattedString("messages.tab-name-afk")));
-            else return Handlers.getFormattedString("messages.tab-name-afk");
-        }
-        if (player != null) return afks.contains(player.getName()) ? player.getName() : null;
-        return afks.contains(params) ? params : null;
+            return Placeholders(player, Handlers.getFormattedString("messages.tab-name-afk"));
+        if (params.startsWith("{") && params.endsWith("}"))
+            return afks.contains(params.substring(1, params.length() - 1)) ? "true" : "false";
+        if (player != null) return afks.contains(player.getName()) ? "true" : "false";
+
+
+        return null;
     }
 }

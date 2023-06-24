@@ -11,12 +11,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 import static com.theaiguy_.afk.Handlers.*;
 
 public final class AFK extends JavaPlugin {
     public static List<String> afks = new ArrayList<>();
     public static JavaPlugin plugin;
+    public static AFKExpansion expansion;
 
 
     @Override
@@ -44,15 +46,21 @@ public final class AFK extends JavaPlugin {
 
         afks = afk.getStringList("afk-players");
 
-        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null)
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null)
         {
-            new AFKExpansion().register();
+            expansion = new AFKExpansion();
+            expansion.register();
         }
     }
 
 
     @Override
     public void onDisable() {
+        afks.clear();
         saveAfks();
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null)
+        {
+            expansion.unregister();
+        }
     }
 }
