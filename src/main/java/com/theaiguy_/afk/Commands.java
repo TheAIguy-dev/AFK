@@ -6,7 +6,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import static com.theaiguy_.afk.AFK.afks;
 import static com.theaiguy_.afk.Handlers.resolve;
 
 public class Commands implements CommandExecutor
