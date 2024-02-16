@@ -6,3 +6,8 @@ api-version: 1.18
 softdepend: [PlaceholderAPI]
 commands:
   afk:
+    usage: /afk
+    permission: afk.use
+permissions:
+  afk.use:
+    default: not op

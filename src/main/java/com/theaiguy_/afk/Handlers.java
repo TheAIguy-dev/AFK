@@ -73,7 +73,7 @@ public class Handlers
                 {
                     if (!p.getName().equals(player.getName()))
                     {
-                        p.sendMessage(Component.text(Placeholders(player, getFormattedString("messages.broadcast-on"))));
+                        p.sendMessage(Component.text(Placeholders(player, getFormattedString("messages.broadcast-off"))));
                     }
                 }
             }
