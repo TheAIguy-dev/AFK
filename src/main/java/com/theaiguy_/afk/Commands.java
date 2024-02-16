@@ -16,7 +16,7 @@ public class Commands implements CommandExecutor
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args)
     {
         if (args.length != 0 || !(sender instanceof Player)) return false;
-        if (!player.hasPermission("afk.use")) return false;
+        if (!sender.hasPermission("afk.use")) return false;
 
         resolve((Player) sender);
 

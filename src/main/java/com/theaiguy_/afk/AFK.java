@@ -28,6 +28,7 @@ public final class AFK extends JavaPlugin {
         PluginCommand afkCommand = getCommand("afk");
         afkCommand.setExecutor(new Commands());
         afkCommand.setUsage(Placeholders(null, getFormattedString("messages.usage")));
+        afkCommand.setPermission(Placeholders(null, getFormattedString("messages.no-permission")));
 
         Bukkit.getPluginManager().registerEvents(new Events(), plugin);
 

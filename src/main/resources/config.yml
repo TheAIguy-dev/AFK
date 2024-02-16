@@ -10,6 +10,7 @@ kick-afk: false
 messages:
   # Command usage
   usage: "&cUsage: /afk"
+  no-permission: "&cYou do not have permission to use this command."
 
   kick: "&cYou were kicked because you are afk."
 
